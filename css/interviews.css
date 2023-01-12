@@ -1,0 +1,79 @@
+h1{
+    font-size: 5rem;
+    text-align: center;
+    margin: 6rem auto 3rem;
+}
+.interview-description{
+    width: 90%;
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.interview-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interview-card{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0.1rem solid var(--grey-dark);
+    border-radius: 2rem;
+    padding: 1.6rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+.animated{
+    animation: moveCard 1s;
+}
+
+@keyframes moveCard{
+    0% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.interview-card_title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.interview-card_number{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: var(--grey-dark);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+.interview-card_text{
+    font-size: 1.6rem;
+    color: rgb(213, 213, 213);
+    text-align: center;
+}
+.container-btn-formInterview{
+    width: fit-content;
+    margin: 3rem auto;
+}
+.btn-formInterview{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+}
+.fa-arrow-up-right-from-square{
+    padding-left: 1rem;
+}
