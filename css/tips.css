@@ -1,0 +1,181 @@
+h2{
+    text-align: center;
+    font-size: 3rem;
+    color: violet;
+    text-shadow: 0 0 6px violet;
+    font-size: 3rem;
+    margin: 0 auto 8rem;
+}
+.h2-faq{
+    text-shadow: 0 0 3px var(--white);
+    color: var(--white);
+}
+.tips-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12rem;
+}
+.tips_card{
+    width: 28%;
+    height: 50vh;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 15px violet, 0 0 15px violet;
+    border: 0.1rem solid violet;
+    opacity: 0;
+}
+.tips-container-img{
+    width: 100%;
+    height: 45%;
+    overflow-y: hidden;
+
+}
+.tips-container-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem 2rem 0 0;
+}
+.tips-container-info{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.tips-container-info h3{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 1px var(--white);
+}
+.tips-container-info span{
+    color: rgb(239, 53, 239);
+}
+.tips-container-info a{
+    padding: 1rem;
+    align-self: center;
+    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.21);
+    /* box-shadow: inset 0 0 3px var(--white), 0 0 3px var(--white); */
+    border: 0.2rem solid var(--white);
+    color: var(--white);
+}
+.tips-container-info a:hover{
+    color: rgb(172, 16, 172);
+    background-color: var(--white);
+    transition: 0.3s;
+}
+
+/* ********************MODAL Sweet Alert************************** */
+.modal-title{
+    color: var(--violet-dark);
+    text-shadow: 0 0 2px var(--violet-dark);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.modal-p{
+    margin: 0 auto 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rgb(226, 226, 226);
+}
+.modal-list{
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+}
+.modal-list li{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: rgb(226, 226, 226);
+}
+.modal-list li:last-of-type{
+    margin-bottom: 0;
+}
+.modal-list li span{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 2rem;
+    padding: 1.6rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--violet-dark);
+    color: var(--white);
+    text-shadow: 0 0 2px var(--white);
+    box-shadow: inset 0 0 6px violet, 0 0 6px violet;
+}
+.modal-btn{
+    padding: 0.6rem 1.6rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black);
+    background-color: violet;
+    border: 0.2rem solid var(--black);
+}
+.modal-btn:hover{
+    padding: 0.6rem 2.2rem;
+    border: 0.2rem solid violet;
+    background-color: var(--black);
+    color: violet;
+    transition: 0.3s;
+}
+
+/* FAQ */
+.delete{
+    display: none;
+}
+.section-faq{
+    margin-bottom: 8rem;
+}
+.section-faq_item{
+    width: 80%;
+    margin: auto;
+}
+.section-faq_item .question{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: inset 0 0 5px var(--white), 0 0 5px var(--white);
+    border: 0.1rem solid var(--white);
+    border-radius: 1rem;
+    margin-bottom: 1.2rem;
+}
+.section-faq_item img{
+    filter: invert();
+    margin-left: 2rem;
+}
+.section-faq_item h3{
+    font-size: 2rem;
+    color: violet;
+}
+.section-faq_item p{
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.section-faq_item p::first-letter{
+    padding-left: 1.6rem;
+}
+.answer{
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+.active{
+    max-height: fit-content;
+    opacity: 1;
+}
+.delete{
+    display: none;
+}
+.arrow-up{
+    color: rgb(237, 43, 237);
+}

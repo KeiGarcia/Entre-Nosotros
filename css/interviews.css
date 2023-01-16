@@ -1,0 +1,232 @@
+h1{
+    font-size: 5rem;
+    text-align: center;
+    margin: 14rem auto 4rem;
+}
+.interview-description{
+    width: 80%;
+    margin: 5rem auto 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: violet;
+}
+.interview-description:last-of-type{
+    width: 100%;
+    margin: 3rem 0 9rem;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--white);
+}
+.interview-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interview-card{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    padding: 1.6rem;
+    opacity: 0;
+    transition: 0.5s;
+    border: 0.1rem solid violet;
+    box-shadow: inset 0 0 10px violet, 0 0 10px violet;
+}
+.animated{
+    animation: moveCard 1s;
+}
+
+@keyframes moveCard{
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.interview-card_title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.interview-card_number{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: rgb(133, 15, 133);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+.interview-card_text{
+    font-size: 1.6rem;
+    color: rgb(213, 213, 213);
+    text-align: center;
+}
+.container-btn-formInterview{
+    width: fit-content;
+    margin: 8rem auto 10rem;
+
+}
+.btn-formInterview{
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1.4rem 2.8rem;
+    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.21);
+    border: 0.1rem solid var(--white);
+    color: var(--white);
+    margin: 2rem auto 4rem;
+}
+.btn-formInterview:hover{
+    padding: 1.4rem 3.6rem;
+    color: rgb(172, 16, 172);
+    background-color: var(--white);
+    transition: 0.3s;
+}
+.fa-arrow-up-right-from-square{
+    padding-left: 1rem;
+}
+.container-logo-yt{
+    width: 10rem;
+}
+.container-logo-yt img{
+    width: 100%;
+}
+main > .section-youtube{
+    padding: 0 0;
+}
+.container-followUs{
+    width: 100%;
+    height: 250px;
+    background-image: url(../imgs/followYt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.video{
+    width: 80%;
+    height: 400px;
+    margin: 6rem auto;
+    border: 1px solid gray;
+}
+.container-youtube{
+    width: fit-content;
+    border-radius: 2rem;
+    background-color: red;
+}
+.fa-youtube{
+    padding: 1.5rem;
+    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.21);
+    color: violet;
+}
+h2{
+    font-size: 4rem;
+    text-align: center;
+    margin: 8rem auto 4rem;
+}
+.section-interviewer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.card-interviewer-left{
+    width: 25%;
+    height: 30rem;
+    position: relative;
+    margin: 2rem 0 4rem;
+    border-radius: 50rem;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+}
+.front{
+    transform: rotateY(0deg);
+    box-shadow: inset 0 0 10px var(--white), 0 0 10px var(--white);
+    width: 100%;
+    height: 50vh;
+    background-image: url(../imgs/entrevistadora.webp);
+    background-size: cover;
+    background-position: center center;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+}
+.back{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    font-weight: bold;
+    transform: rotateY(180deg);
+    border: 0.1rem solid violet;
+    box-shadow: inset 0 0 10px violet, 0 0 10px violet;
+}
+.card-interviewer-left:hover > .front{
+    transform: rotateY(-180deg);
+}
+.card-interviewer-left:hover > .back{
+    transform: rotateY(0deg);
+}
+.back > p{
+    color: violet;
+    font-size: 1.4rem;
+}
+.card-interviewer-right{
+    width: 40%;
+    margin-left: 5rem;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card-interviewer-right h3{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: rgb(172, 16, 172);
+}
+.card-interviewer-right h3 span{
+    border-bottom: 0.3rem solid var(--grey-dark);
+}
+.card-interviewer-right p{
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+.card-interviewer-right div i{
+    padding: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.21);
+    color: var(--white);
+    box-shadow: inset 0 0 3px var(--white), 0 0 3px var(--white);
+}
+.card-interviewer-right div a:hover i{
+    color: rgb(172, 16, 172);
+    background-color: var(--white);
+    transition: 0.3s;
+}

@@ -7,7 +7,7 @@ const app = Vue.createApp({
             specialty: ["Backend", "Data science/ Data Engineer", "Frontend", "QA", "All"],
 
             select: [],
-            page: "mentoring",
+            page: "home",
             inicioSesion: false,
             modal1: true,
 

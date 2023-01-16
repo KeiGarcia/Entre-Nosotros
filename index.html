@@ -8,20 +8,26 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/tips.css">
+    <link rel="stylesheet" href="./css/interviews.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/mentoring.css">
     <link rel="stylesheet" href="./css/style.css">
-
-
     <title>Entre-Nosotros</title>
 </head>
 
 <body>
-    <div id="app">        
+    <!-- particles js -->
+    <div v-if="page === 'home'" id="particles-js"></div>
+
+    <div id="app">
         <header>
-            <div class="container-logo">
-                <img src="" alt="Entre-Nosotros logo">
-            </div>
+            <button @click="page = 'home'" class="container-logo">
+                <img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo">
+            </button>
             <nav class="container-menu">
                 <button class="bg-transparent" @click="page = 'interview'">Entrevistas</button>
                 <button class="bg-transparent" @click="page = 'mentoring'">Mentorías</button>
@@ -38,8 +44,8 @@
                 data-bs-target="#exampleModal2"><i class="fa-solid fa-user"></i>Tu cuenta</button>
 
             <!-- Modal inicio sesion-->
-            <div class="modal fade" v-if="!inicioSesion" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" v-if="!inicioSesion" id="exampleModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content login1 borderNeonViolet">
                         <div class="modal-header d-flex justify-content-center">
@@ -62,13 +68,13 @@
 
                             <article class="text-center">
                                 <button
-                                    class="mt-3 btn btn-neon text-light border fs-5 border-1 border-light mx-auto  w-75" data-bs-dismiss="modal" aria-label="Close"
-                                    @click="iniciarSesion()" >Iniciar
+                                    class="mt-3 btn btn-neon text-light border fs-5 border-1 border-light mx-auto  w-75"
+                                    data-bs-dismiss="modal" aria-label="Close" @click="iniciarSesion()">Iniciar
                                     Sesión</button>
 
                                 <button
                                     class=" btn btn-neon mx-auto w-75 text-light mt-3 border border-1 border-light fs-5">
-                                    <img src="../img/google.png"
+                                    <img src="./imgs/google.png"
                                         style="height: 22px; width: 22px; vertical-align:middle;" alt="google"> Iniciar
                                     Sesión con
                                     Google</button>
@@ -105,9 +111,9 @@
                         <div class="modal-body">
                             <article>
                                 <label class="p-2 text-light w-100 text-start">Email
-                                    <input type="email" v-model="emailRegistro1"
+                                    <input type="email" v-model="emailRegistro"
                                         class="border borderInput border-1 border-light select text-center w-100"
-                                        placeholder="Email" >
+                                        placeholder="Email">
                                 </label>
                             </article>
 
@@ -121,10 +127,11 @@
 
                             <article class="text-center m-5">
                                 <button class="btn btn-neon signUp-bgc text-light  fs-5  mx-auto  w-75"
-                                    @click="crearUsuario()" data-bs-dismiss="modal" aria-label="Close">Crear nueva cuenta</button>
+                                    @click="crearUsuario()" data-bs-dismiss="modal" aria-label="Close">Crear nueva
+                                    cuenta</button>
 
                                 <button class=" btn btn-neon mx-auto w-75 text-light m-3 signUp-bgc fs-5">
-                                    <img src="../img/google.png"
+                                    <img src="./imgs/google.png"
                                         style="height: 22px; width: 22px; vertical-align:middle;" alt="google"> Crear
                                     nueva cuenta con
                                     Google</button>
@@ -137,8 +144,8 @@
             </div>
 
             <!-- Modal cerrar sesion -->
-            <div class="modal fade" v-if="inicioSesion" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
-                aria-hidden="true">
+            <div class="modal fade" v-if="inicioSesion" id="exampleModal2" tabindex="-1"
+                aria-labelledby="exampleModalLabel2" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content signUp borderNeonViolet">
                         <div class="modal-header d-flex justify-content-center">
@@ -151,7 +158,8 @@
 
                             <article class="text-center m-5">
                                 <button class="btn btn-neon signUp-bgc text-light  fs-5  mx-auto  w-75"
-                                    @click="cerrarSesion()" data-bs-dismiss="modal" aria-label="Close">Cerrar sesión</button>
+                                    @click="cerrarSesion()" data-bs-dismiss="modal" aria-label="Close">Cerrar
+                                    sesión</button>
                             </article>
                         </div>
                     </div>
@@ -159,19 +167,159 @@
             </div>
         </header>
         <main>
-
             <!-- INDEX -->
-            <section v-if="page == 'home'">
-            </section>
+            <template v-if="page == 'home'">
+
+                <section class="section-welcome">
+                    <div class="container-welcome_img">
+                        <img src="./imgs/dibujo-interview.png" alt="Imagen de una entrevista laboral">
+                    </div>
+
+                    <div class="container-welcome_txt">
+                        <h2 class="animate__animated animate__fadeInDown">¿Querés tener éxito en tu próxima entrevista?
+                        </h2>
+                        <div>
+                            <a class="animate__animated animate__fadeInUp draw" href="#cards">Enterate cómo te ayudamos
+                                a lograrlo</a>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="description-welcome first-p">Sabemos que <span>buscar trabajo es un trabajo</span> y es por
+                    eso que nuestro objetivo es facilitarte al máximo una de las etapas más difíciles del proceso de
+                    selección: <span class="span-interview">la entrevista</span>. </p>
+                <p class="description-welcome">Si ya pasaste por alguna entrevista seguro fue un momento de muchos
+                    nervios y es totalmente normal...¡nos pasa a todos! Pero tenemos una buena noticia. Esos nervios
+                    pueden disminuir en gran medida si te preparás antes de la entrevista. <span>Cuanta mayor
+                        preparación, mayor confianza y seguridad tendrás para enfrentarla</span>.</p>
+                <p id="cards" class="description-welcome last-p">Te invitamos a conocer nuestras iniciativas para
+                    ayudarte en tu búsqueda laboral y en el desarrollo de tu carrera profesional.</p>
+
+                <section class="home-cards">
+                    <article>
+                        <h3>Tips de entrevistas</h3>
+                        <div>
+                            <p>Praparar la entrevista, saber desenvolverte durante la misma y qué hacés luego de
+                                finalizarla son puntos igual de importantes en esta etapa del proceso de selección. Te
+                                brindamos los mejores tips del antes, durante y después de una entrevista y reunimos las
+                                preguntas más frecuentes con sus respuestas.</p>
+                            <div class="container-btn">
+                                <a href="./html/tips.html">Conocer más</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Entrevistas</h3>
+                        <div>
+                            <p>¿Ya seguiste nuestros tips de entrevistas y te sentís preparado para afrontar una con
+                                mayor confianza? Excelente, ahora es el momento de ponerse a prueba. Tendrás la
+                                posibilidad de practicar una entrevista simulada con alguno de nuestros recruiters
+                                voluntarios con experiencia real en el rubro tech.</p>
+                            <div class="container-btns">
+                                <a href="./html/interviews.html">Conocer más</a>
+                                <a id="btn-interview" class="btn-want" href="#">Quiero entrevistar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Mentorías</h3>
+                        <div>
+                            <p>¿Estás haciendo un cambio de carrera y te sentís perdido? ¿Estás empezando a estudiar
+                                programación y no sabés por dónde iniciar o qué estudiar? ¿Ya te decidiste y necesitas
+                                consejos de alguien con experiencia? Tendrás la posibilidad de coordinar reuniones con
+                                nuestros mentores voluntarios.</p>
+                            <div class="container-btns">
+                                <a href="#">Conocer más</a>
+                                <a id="btn-mentor" class="btn-want" href="#">Quiero ser mentor</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </template>
 
 
             <!-- INTERVIEWS -->
-            <section v-if="page == 'interview'">
-                
-            </section>
+            <template v-if="page == 'interview'">
+                <h1 class="animate__animated animate__fadeInDown">Entrevistas</h1>
+
+                <p class="interview-description">¿Te gustaría participar por una entrevista con algún profesional de
+                    Recursos Humanos del área de tecnología?</p>
+                <p class="interview-description">
+                    Simularán una entrevista real. Se te harán algunas de las preguntas más frecuentes en una entrevista
+                    y deberás responder con la seriedad y predisposición que ésta amerita ya que, al finalizar, te
+                    llevarás un feedback muy valioso de parte del entrevistador que podrás utilizar para mejorar en tus
+                    próximas entrevistas reales.
+                    <!-- Todos los domingos realizamos un Vivo por nuestro canal de Youtube <span>@entre-nosotros</span> donde  -->
+                </p>
+
+                <section class="">
+                    <div class="interview-cards">
+                        <article class="interview-card">
+                            <p class="interview-card_title"><span class="interview-card_number">1</span>Título de
+                                ejemplo</p>
+                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
+                            </p>
+                        </article>
+
+                        <article class="interview-card">
+                            <p class="interview-card_title"><span class="interview-card_number">2</span>Título de
+                                ejemplo</p>
+                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
+                            </p>
+                        </article>
+
+                        <article class="interview-card">
+                            <p class="interview-card_title"><span class="interview-card_number">3</span>Título de
+                                ejemplo</p>
+                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="container-btn-formInterview">
+                        <a href="#" class="btn-formInterview">Quiero una entrevista</a>
+                    </div>
+                </section>
+
+                <section class="container-followUs"></section>
+
+                <section class="section-video">
+                    <div class="video"></div>
+                </section>
+
+                <!-- <a class="yt-icon" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a> -->
+                <h2>Conocé al entrevistador de esta semana</h2>
+                <section class="section-interviewer">
+                    <article class="card-interviewer-left">
+                        <div class="card front">
+                        </div>
+
+                        <div class="card back">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur fugit tempora
+                                temporibus quia deserunt quae dolores earum, asperiores sapiente exercitationem. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit. Odit quas dolores, et quo omnis
+                                minus? Non nostrum nemo aut quibusdam?</p>
+                        </div>
+                    </article>
+
+                    <article class="card-interviewer-right">
+                        <h3>María Alejandra Figga<span>ressi</span></h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad voluptate fugiat molestiae
+                            pariatur possimus, at illum qui odit praesentium quo ab velit similique beatae esse rerum
+                            quasi tempora, quod hic.</p>
+                        <div>
+                            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </article>
+                </section>
+            </template>
 
             <!-- MENTORING -->
-            <section v-if="page == 'mentoring'">
+            <template v-if="page == 'mentoring'">
                 <h1>Mentorias</h1>
                 <p class="interview-description fs-3">
                     Te invitamos a contartar con nuestros mentores voluntarios, ellos son profesionales y referentes
@@ -211,13 +359,14 @@
                     <!-- SELECT -->
                     <h2 class="pt-5 mt-5 pb-4 text-light">Solicita una mentoría según especialidad</h2>
                     <div class="pb-5">
-                        <select class="form-select backgroundDark text-light fs-4 p-2 select borderNeonViolet" v-model="specialty">
+                        <select class="form-select backgroundDark text-light fs-4 p-2 select borderNeonViolet"
+                            v-model="specialty">
                             <option selected value="All">Todas las especialidades</option>
-                            <option  value="Backend">Backend</option>
-                            <option  value="Data science/ Data Engineer">Data science/ Data Engineer
+                            <option value="Backend">Backend</option>
+                            <option value="Data science/ Data Engineer">Data science/ Data Engineer
                             </option>
-                            <option  value="Frontend">Frontend</option>
-                            <option  value="QA">QA</option>
+                            <option value="Frontend">Frontend</option>
+                            <option value="QA">QA</option>
                         </select>
                     </div>
 
@@ -232,9 +381,9 @@
                                 </div>
 
                                 <div class=" d-flex flex-column col-6 align-items-end">
-                                    <a class="btn-neon text-light aCalendly border border-1 border-light px-5 fs-4" target="_blank"
-                                        :href="mentor.calendly" v-if="inicioSesion === true"
-                                        >Solicitar mentoría</a>
+                                    <a class="btn-neon text-light aCalendly border border-1 border-light px-5 fs-4"
+                                        target="_blank" :href="mentor.calendly" v-if="inicioSesion === true">Solicitar
+                                        mentoría</a>
                                     <button type="button" v-if="inicioSesion === false"
                                         class="btn btn-neon text-light border border-1 border-light px-5 fs-4"
                                         @click="mentoring()">Solicitar mentoría</button>
@@ -260,27 +409,259 @@
 
                 </section>
 
-            </section>
+            </template>
 
             <!-- TIPS INTERVIEWS -->
-            <section v-if="page == 'tips'">
-            </section>
+            <template v-if="page == 'tips'">
+                <h1 class="animate__animated animate__fadeInDown">Tips de entrevista</h1>
+
+                <h2 class="animate__animated animate__fadeInDown">Preparate con nosotros para tu próxima entrevista</h2>
+
+                <section class="tips-cards">
+                    <article class="tips_card">
+                        <div class="tips-container-img">
+                            <img src="../imgs/taking-notes.webp" alt="Imagen de una persona pensando">
+                        </div>
+                        <div class="tips-container-info">
+                            <h3>¿Qué hacer <span>antes</span> de una entrevista?</h3>
+                            <a id="btn-before" class="btn-toModal" href="#"><i
+                                    class="fa-brands fa-readme fa-2x"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="tips_card">
+                        <div class="tips-container-img">
+                            <img src="../imgs/inInterview.jpg" alt="Imagen de una persona en una entrevista">
+                        </div>
+                        <div class="tips-container-info">
+                            <h3>¿Qué hacer <span>durante</span> una entrevista?</h3>
+                            <a id="btn-in" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="tips_card">
+                        <div class="tips-container-img">
+                            <img src="../imgs/sending-email.webp" alt="Imagen de una persona con una computadora">
+                        </div>
+                        <div class="tips-container-info">
+                            <h3>¿Qué hacer <span>después</span> de una entrevista?</h3>
+                            <a id="btn-after" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                        </div>
+                    </article>
+                </section>
+
+                <h2 class="h2-faq">Cómo responder posibles preguntas de entrevista</h2>
+
+                <section class="section-faq">
+                    <article class="section-faq_item">
+                        <div class="question">
+                            <h3>Contame algo sobre vos</h3>
+                            <i class="fa-solid fa-chevron-down fa-2x arrow-down"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                A primera vista, parece una frase inocente para romper el hielo, pero tiene un objetivo
+                                bien claro: conocer qué tenés para ofrecerle a la empresa. El interés no está en tu vida
+                                personal, sino en tu vida laboral. Cómo trabajás, tus áreas de experiencia, qué aportes
+                                tenés para la empresa, etc. Demostrá tu valía y planteá tus puntos fuertes.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="section-faq_item">
+                        <div class="question">
+                            <h3>¿Cuál creés que es tu mayor defecto?</h3>
+                            <i class="fa-solid fa-chevron-down arrow-down fa-2x"></i>
+                        </div>
+                        <div class="answer">
+                            <p>Con esta pregunta, el entrevistador intenta averiguar dos aspectos clave sobre vos: tu
+                                capacidad para asumir tus errores y tu habilidad para corregirlos.</p>
+                            <p>Quiere saber si tenés buena recepción a la crítica y te esforzás por mejorar, o si sos de
+                                los que niegan los errores y se resisten a cambiar de hábitos.</p>
+                            <p>No digas frases como: "soy muy perfeccionista", "soy demasiado responsable", "me estreso
+                                si algo sale mal". Un consejo es mencionar alguna habilidad importante pero no
+                                determinante.
+                            </p>
+                            <p>Por ejemplo, si te desempeñás en área de la informática, podés decir que tu debilidad es
+                                la comunicación con el cliente. Como programador, desarrollador o diseñador eres
+                                excelente, pero no sabés vender tus productos. Ahora bien, ese no es tu trabajo. De esta
+                                forma, podés ser honesto, pero sin poner en riesgo el puesto al que estás aspirando</p>
+                        </div>
+
+                    </article>
+
+                    <article class="section-faq_item">
+                        <div class="question">
+                            <h3> ¿Por qué querés trabajar con nosotros?</h3>
+                            <i class="fa-solid fa-chevron-down arrow-down fa-2x"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Cuando te estés preparando para la entrevista de trabajo, asegúrate de tener un buen
+                                conocimiento de los productos y servicios de la empresa, su cultura corporativa y los
+                                planes futuros que te imaginas junto a ella. Utiliza esta información para describir de
+                                qué manera tus metas y ambiciones se alinean con estas motivaciones.
+                            </p>
+                            <p>
+                                Asegúrate de estar familiarizad@ con las últimas noticias relacionadas con la
+                                organización. Piensa en cómo tus objetivos y aspiraciones profesionales se alinean con
+                                su cultura corporativa, y utiliza esta información para formular una respuesta a esta
+                                misma pregunta: ¿qué proyectos me puede ofrecer la empresa que vayan en línea con mis
+                                ganas de aportar al desarrollo y crecimiento de la misma?.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="section-faq_item">
+                        <div class="question">
+                            <h3>Contame de algún error que hayas cometido y cómo lo solucionaste</h3>
+                            <i class="fa-solid fa-chevron-down arrow-down fa-2x"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Preguntas como ésta son clásicas en una entrevista de trabajo. Pretenden ir más allá de
+                                las respuestas formuladas y cuestionar al candidato sobre su manera individual de
+                                reaccionar ante diferentes situaciones.
+                            </p>
+                            <p>
+                                Pueden preguntarte ejemplos sobre resolución de conflictos, estrés, ansiedad,
+                                dificultades, integridad, etc. El objetivo es que demuestres con ejemplos qué clase de
+                                empleado sos. Preparate de antemano para dar ejemplos concretos y resolutivos de tu vida
+                                profesional.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="section-faq_item">
+                        <div class="question">
+                            <h3> ¿Por qué deberíamos contratarte?</h3>
+                            <i class="fa-solid fa-chevron-down arrow-down fa-2x"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                Dejá la inseguridad a un lado y vendete. Éste es el momento de hablar bien de vos mismo,
+                                destacá tus competencias, cualidades y experiencia.
+                            </p>
+                            <p>
+                                Ejemplo: “Con la experiencia que he adquirido en esta área, hoy en día soy capaz de
+                                alcanzar e incluso superar las expectativas del puesto”, o “gracias a mi trayectoria,
+                                puedo ofrecer como valor agregado esta solución a esta tarea en particular”. También
+                                ayuda mucho hablar sobre la empresa, por ejemplo: “sé que la empresa busca posicionarse
+                                en el mercado, y me interesaría poder aportar en el equipo encargado de cumplir con ese
+                                objetivo”.
+                            </p>
+                            <p>
+                                Demostrá tu pasión y hablá de cómo trabajarías para alcanzar las metas clave que la
+                                empresa espera de vos.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+            </template>
 
             <!-- CONTACT -->
-            <section v-if="page == 'contact'">
-            </section>
+            <template v-if="page == 'contact'">
+                <h1 class="animate__animated animate__fadeInDown">Sobre nosotros</h1>
 
+                <section class="section-team">
+                    <h2>Nuestro equipo</h2>
+                    <article class="section-team_member">
+                        <div class="container-team-member-photo left">
+                            <h3>KEILA TANIA GARCÍA</h3>
+                        </div>
+
+                        <div class="container-team-member-info">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, doloremque quos
+                                beatae velit doloribus et repudiandae eligendi ullam maxime quo nemo nihil provident
+                                corporis sapiente saepe itaque sint aliquid omnis repellendus soluta necessitatibus?
+                                Enim nulla numquam corporis repellendus reiciendis in? Ex illo consequatur sequi
+                                exercitationem iste eos cupiditate porro id!</p>
+
+                            <div class="container-socialMedia">
+                                <a href="https://www.linkedin.com/in/keilagarc%C3%ADa/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/KeiGarcia"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="section-team_member right-border">
+                        <div class="container-team-member-info">
+                            <p>Camila tiene 24 años y vive en la Ciudad de Buenos Aires. Estudió Medicina en la UBA
+                                hasta el 4° año de la carrera. Durante la pandemia comenzó a estudiar programación de
+                                manera autodidacta y le fascinó tanto el mundo de la tecnología y sus posibilidades que
+                                a mediados del 2022 decidió salir de su zona de confort y empezar a estudiar tecnología.
+                                En el 2023 iniciará la Tecnicatura en Análisis de Sistemas Informáticos y su objetivo es
+                                conseguir su primer empleo en el área IT.</p>
+
+                            <div class="container-socialMedia right">
+                                <a href="https://www.linkedin.com/in/camila-herediav/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/camilaheredia9"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="container-team-member-photo right">
+                            <h3>CAMILA HEREDIA VALVERDE</h3>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section-why">
+                    <h2>¿Por qué decidimos crear este proyecto?</h2>
+                    <p>Este proyecto fue creado como parte de la certificación del programa de capacitación laboral
+                        brindado por Fundación Pescar y J.P. Morgan. Debíamos crear un sitio web y la temática a elegir
+                        era libre. Elegimos Entre-Nosotros porque actualmente las dos integrantes del equipo estamos
+                        estudiando programación y nos encontramos en búsqueda laboral activa y sabemos lo difícil que
+                        puede ser enfrentar el momento de la entevista o no saber qué seguir estudiando teniendo en
+                        cuento la velocidad a la que avanza la tecnología. En Fundación Pescar nos brindaron muchas
+                        herramientas y conocimientos que hoy en día nos hacen sentir un poco más confiadas para
+                        atravesar un proceso de selección y es por eso que quisimos darle esa misma posibilidad a
+                        quienes lo necesiten.</p>
+                </section>
+            </template>
         </main>
 
-        <footer></footer>
+        <!-- footer -->
+        <footer>
+            <section class="footer-first-section">
+                <div class="container-logo">
+                    <a href="#"><img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
+                </div>
+                <p>Somos una comunidad llena de voluntarios con ganas de ayudarte a cumplir tus metas y conseguir ese
+                    trabajo que tanto anhelas.</p>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
+            </section>
+
+            <section class="footer-second-section">
+                <h4>SECCIONES</h4>
+                <ul>
+                    <li><a href="./html/interviews.html">ENTREVISTAS</a></li>
+                    <li><a href="#">MENTORIAS</a></li>
+                    <li><a href="./html/tips.html">TIPS ENTREVISTAS</a></li>
+                    <li><a href="./html/aboutUs.html">NOSOTROS</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-third-section">
+                <h4>NUESTOS DATOS</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot fa-2x"></i>Buenos Aires, Argentina</li>
+                    <li><i class="fa-solid fa-envelope fa-2x"></i>info.entre-nosotros@gmail.com</li>
+                </ul>
+            </section>
+        </footer>
 
     </div>
-
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <!-- particles js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- SWEET ALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -288,15 +669,16 @@
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
 
-    <!-- FIREBASE    -->
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
 
     <!-- VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+
+    <script src="./js/particles.js"></script>
+    <script src="./js/sweetAlertHome.js"></script>
+    <script src="./js/validateForm.js"></script>
     <script src="./js/moveCards.js"></script>
+    <script src="./js/faq.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
