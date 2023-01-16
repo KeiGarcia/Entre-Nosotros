@@ -7,7 +7,7 @@ arrowsDown.forEach((arrowDown) => {
         const question = e.target.parentElement;
         const answer = e.target.parentElement.parentElement.children[1];
 
-        question.style.backgroundColor = "rgb(236, 225, 225)";
+        question.style.backgroundColor = "var(--violet-dark)";
         arrowDown.style.display = "none";
         answer.classList.add("active");
 
