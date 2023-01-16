@@ -217,7 +217,7 @@
                                 voluntarios con experiencia real en el rubro tech.</p>
                             <div class="container-btns">
                                 <a href="./html/interviews.html">Conocer más</a>
-                                <a id="btn-interview" class="btn-want" href="#">Quiero entrevistar</a>
+                                <a @click="addEventToInterviewerBtn()" class="btn-want" href="#">Quiero entrevistar</a>
                             </div>
                         </div>
                     </article>
@@ -230,7 +230,7 @@
                                 nuestros mentores voluntarios.</p>
                             <div class="container-btns">
                                 <a href="#">Conocer más</a>
-                                <a id="btn-mentor" class="btn-want" href="#">Quiero ser mentor</a>
+                                <a @click="addEventToMentortn()" class="btn-want" href="#">Quiero ser mentor</a>
                             </div>
                         </div>
                     </article>
@@ -424,7 +424,7 @@
                         </div>
                         <div class="tips-container-info">
                             <h3>¿Qué hacer <span>antes</span> de una entrevista?</h3>
-                            <a id="btn-before" class="btn-toModal" href="#"><i
+                            <a @click="eventBefore()" class="btn-toModal" href="#"><i
                                     class="fa-brands fa-readme fa-2x"></i></a>
                         </div>
                     </article>
@@ -435,7 +435,7 @@
                         </div>
                         <div class="tips-container-info">
                             <h3>¿Qué hacer <span>durante</span> una entrevista?</h3>
-                            <a id="btn-in" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                            <a @click="eventIn()" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
                         </div>
                     </article>
 
@@ -445,7 +445,7 @@
                         </div>
                         <div class="tips-container-info">
                             <h3>¿Qué hacer <span>después</span> de una entrevista?</h3>
-                            <a id="btn-after" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                            <a @click="eventAfter()" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
                         </div>
                     </article>
                 </section>
@@ -673,12 +673,9 @@
     <!-- VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-
     <script src="./js/particles.js"></script>
-    <script src="./js/sweetAlertHome.js"></script>
-    <script src="./js/validateForm.js"></script>
-    <script src="./js/moveCards.js"></script>
     <script src="./js/faq.js"></script>
+    <script src="./js/moveCards.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
