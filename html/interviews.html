@@ -5,36 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+     <!-- animate css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/interviews.css">
-        
+    <link rel="stylesheet" href="../css/footer.css">    
+
     <title>Entrevistas</title>
 </head>
 <body>
     <!-- header -->
     <header>
         <div class="container-logo">
-            <img src="../imgs/barbie-logo.png" alt="Entre-Nosotros logo">
+            <a href="../index.html"><img src="../imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
         </div>
         <nav  class="container-menu">
             <a href="#">Entrevistas</a>
             <a href="#">Mentorías</a>
-            <a href="#">Tips entrevista</a>
-            <a href="#">Contacto</a>
+            <a href="./tips.html">Tips entrevista</a>
+            <a href="./aboutUs.html">Nosotros</a>
         </nav>
         <a class="btn-login" href="#"><i class="fa-solid fa-user"></i>Iniciar sesión</a>
     </header>
 
     <!-- main -->
     <main>
-        <h1>Entrevistas</h1>
+        <h1 class="animate__animated animate__fadeInDown">Entrevistas</h1>
 
+        <p class="interview-description">¿Te gustaría participar por una entrevista con algún profesional de Recursos Humanos del área de tecnología?</p>
         <p class="interview-description">
-            Texto que explique los beneficios de participar...Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores aliquid, eos dolorum perspiciatis error explicabo quibusdam sequi ratione rem excepturi nisi dolore optio autem omnis! Nulla vitae quod modi iusto iure quasi saepe officia consequuntur quam aspernatur, vero ab nesciunt assumenda est esse sunt sapiente quisquam itaque alias sint obcaecati!
+            Simularán una entrevista real. Se te harán algunas de las preguntas más frecuentes en una entrevista y deberás responder con la seriedad y predisposición que ésta amerita ya que, al finalizar, te llevarás un feedback muy valioso de parte del entrevistador que podrás utilizar para mejorar en tus próximas entrevistas reales.
+            <!-- Todos los domingos realizamos un Vivo por nuestro canal de Youtube <span>@entre-nosotros</span> donde  -->
         </p>
 
-        <section>
+        <section class="">
             <div class="interview-cards">
                 <article class="interview-card">
                     <p class="interview-card_title"><span class="interview-card_number">1</span>Título de ejemplo</p>
@@ -53,16 +58,67 @@
             </div>
 
             <div class="container-btn-formInterview">
-                <a href="#" class="btn-formInterview">Quiero participar por una entrevista <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="btn-formInterview">Quiero una entrevista</a>
             </div>
         </section>
 
-        <section class="section-youtube">
-            <h2>Seguinos en nuestro canal de Youtube</h2>
-            <p>Allí encontrarás todas las entrevistas realizadas hasta el momento</p>
-            <p>Identificá puntos de mejora y tomá nota de los puntos fuertes que notas en cada entrevista</p>
+        <section class="container-followUs"></section>
+        
+        <section class="section-video">
+            <div class="video"></div>
+        </section>
+
+        <!-- <a class="yt-icon" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a> -->
+        <h2>Conocé al entrevistador de esta semana</h2>
+        <section class="section-interviewer">
+            <article class="card-interviewer-left">
+                <div class="card front">
+                </div>
+    
+                <div class="card back">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur fugit tempora temporibus quia deserunt quae dolores earum, asperiores sapiente exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quas dolores, et quo omnis minus? Non nostrum nemo aut quibusdam?</p>
+                </div>
+            </article>
+
+            <article class="card-interviewer-right">
+                <h3>María Alejandra Figga<span>ressi</span></h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad voluptate fugiat molestiae pariatur possimus, at illum qui odit praesentium quo ab velit similique beatae esse rerum quasi tempora, quod hic.</p>
+                <div>
+                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </article>
         </section>
     </main>
+
+    <!-- footer -->
+    <footer>
+        <section class="footer-first-section">
+            <div class="container-logo">
+                <a href="../index.html"><img src="../imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
+            </div>
+            <p>Somos una comunidad llena de voluntarios con ganas de ayudarte a cumplir tus metas y conseguir ese trabajo que tanto anhelas.</p>
+            <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
+        </section>
+
+        <section class="footer-second-section">
+            <h4>SECCIONES</h4>
+            <ul>
+                <li><a href=".#">ENTREVISTAS</a></li>
+                <li><a href="#">MENTORIAS</a></li>
+                <li><a href="./tips.html">TIPS ENTREVISTAS</a></li>
+                <li><a href="./aboutUs.html">NOSOTROS</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-third-section">
+            <h4>NUESTOS DATOS</h4>
+            <ul>
+                <li><i class="fa-solid fa-location-dot fa-2x"></i>Buenos Aires, Argentina</li>
+                <li><i class="fa-solid fa-envelope fa-2x"></i>info.entre-nosotros@gmail.com</li>
+            </ul>
+        </section>
+    </footer>
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

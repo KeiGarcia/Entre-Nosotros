@@ -6,30 +6,126 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- BOOTSTRAP -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- animate css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <!-- CSS -->
+        <link rel="stylesheet" href="./css/tips.css"> 
+        <link rel="stylesheet" href="./css/interviews.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/footer.css">
         <title>Entre-Nosotros</title>
     </head>
     <body>
+        <!-- particles js -->
+        <div id="particles-js"></div>
 
         <!-- header -->
         <header>
             <div class="container-logo">
-                <img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo">
+                <a href="#"><img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
             </div>
             <nav  class="container-menu">
                 <a href="./html/interviews.html">Entrevistas</a>
                 <a href="#">Mentorías</a>
-                <a href="#">Tips entrevista</a>
-                <a href="#">Contacto</a>
+                <a href="./html/tips.html">Tips entrevistas</a>
+                <a href="./html/aboutUs.html">Nosotros</a>
             </nav>
             <a class="btn-login" href="#"><i class="fa-solid fa-user"></i>Iniciar sesión</a>
         </header>
 
+        <!-- main -->
+        <main>
+            <section class="section-welcome">
+                <div class="container-welcome_img">
+                    <img src="./imgs/dibujo-interview.png" alt="Imagen de una entrevista laboral">
+                </div>
+
+                <div class="container-welcome_txt">
+                    <h2 class="animate__animated animate__fadeInDown">¿Querés tener éxito en tu próxima entrevista?</h2>
+                    <div>
+                        <a class="animate__animated animate__fadeInUp draw" href="#cards">Enterate cómo te ayudamos a lograrlo</a>
+                    </div>
+                </div>
+            </section>
+
+            <p class="description-welcome first-p">Sabemos que <span>buscar trabajo es un trabajo</span> y es por eso que nuestro objetivo es facilitarte al máximo una de las etapas más difíciles del proceso de selección: <span class="span-interview">la entrevista</span>. </p>
+            <p class="description-welcome">Si ya pasaste por alguna entrevista seguro fue un momento de muchos nervios y es totalmente normal...¡nos pasa a todos! Pero tenemos una buena noticia. Esos nervios pueden disminuir en gran medida si te preparás antes de la entrevista. <span>Cuanta mayor preparación, mayor confianza y seguridad tendrás para enfrentarla</span>.</p>
+            <p id="cards" class="description-welcome last-p">Te invitamos a conocer nuestras iniciativas para ayudarte en tu búsqueda laboral y en el desarrollo de tu carrera profesional.</p>
+
+            <section class="home-cards">
+                <article>
+                    <h3>Tips de entrevistas</h3>
+                    <div>
+                        <p>Praparar la entrevista, saber desenvolverte durante la misma y qué hacés luego de finalizarla son puntos igual de importantes en esta etapa del proceso de selección. Te brindamos los mejores tips del antes, durante y después de una entrevista y reunimos las preguntas más frecuentes con sus respuestas.</p>
+                        <div class="container-btn">
+                            <a href="./html/tips.html">Conocer más</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>Entrevistas</h3>
+                    <div>
+                        <p>¿Ya seguiste nuestros tips de entrevistas y te sentís preparado para afrontar una con mayor confianza? Excelente, ahora es el momento de ponerse a prueba. Tendrás la posibilidad de practicar una entrevista simulada con alguno de nuestros recruiters voluntarios con experiencia real en el rubro tech.</p>
+                        <div class="container-btns">
+                            <a href="./html/interviews.html">Conocer más</a>
+                            <a id="btn-interview" class="btn-want" href="#">Quiero entrevistar</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>Mentorías</h3>
+                    <div>
+                        <p>¿Estás haciendo un cambio de carrera y te sentís perdido? ¿Estás empezando a estudiar programación y no sabés por dónde iniciar o qué estudiar? ¿Ya te decidiste y necesitas consejos de alguien con experiencia? Tendrás la posibilidad de coordinar reuniones con nuestros mentores voluntarios.</p>
+                        <div class="container-btns">
+                            <a href="#">Conocer más</a>
+                            <a id="btn-mentor" class="btn-want" href="#">Quiero ser mentor</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <section class="footer-first-section">
+                <div class="container-logo">
+                    <a href="#"><img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
+                </div>
+                <p>Somos una comunidad llena de voluntarios con ganas de ayudarte a cumplir tus metas y conseguir ese trabajo que tanto anhelas.</p>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
+            </section>
+
+            <section class="footer-second-section">
+                <h4>SECCIONES</h4>
+                <ul>
+                    <li><a href="./html/interviews.html">ENTREVISTAS</a></li>
+                    <li><a href="#">MENTORIAS</a></li>
+                    <li><a href="./html/tips.html">TIPS ENTREVISTAS</a></li>
+                    <li><a href="./html/aboutUs.html">NOSOTROS</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-third-section">
+                <h4>NUESTOS DATOS</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot fa-2x"></i>Buenos Aires, Argentina</li>
+                    <li><i class="fa-solid fa-envelope fa-2x"></i>info.entre-nosotros@gmail.com</li>
+                </ul>
+            </section>
+        </footer>
+
         <!-- BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
-
+        <!-- particles js -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <!-- sweet alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+        <!-- archivos js -->
         <script src="./js/script.js"></script>
+        <script src="./js/particles.js"></script>
+        <script src="./js/sweetAlertHome.js"></script>
+        <script src="./js/validateForm.js"></script>
     </body>
 </html>
