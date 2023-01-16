@@ -15,9 +15,11 @@ html{
     --violet-dark: rgb(133, 15, 133);
 }
 body{
+    width: 100vw;
     background-color: var(--black);
     color: var(--white);
-    position: relative;
+    /* position: relative; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
@@ -42,12 +44,12 @@ header{
     padding: 1rem 13%;
     background-color: var(--black);
     border-bottom: 0.1rem solid rgb(162, 161, 161);
-    position: fixed;
-    top: 0;
+    /* position: fixed; */
+    /* top: 0; */
 }
 .container-logo{
-    width: 10rem;
-    margin-right: 9rem;
+    width: 13rem;
+    /* margin-right: 9rem; */
 }
 .container-logo img{
     width: 100%;
@@ -87,7 +89,7 @@ header button{
     background-color: var(--white);
 }
 .section-welcome{
-    margin: 18rem auto 0;
+    margin: 12rem auto 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

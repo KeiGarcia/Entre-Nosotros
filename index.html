@@ -11,9 +11,10 @@
     <!-- animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/accordion.css">
     <link rel="stylesheet" href="./css/tips.css">
-    <link rel="stylesheet" href="./css/interviews.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/interviews.css">
     <link rel="stylesheet" href="./css/mentoring.css">
     <link rel="stylesheet" href="./css/aboutUs.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -27,12 +28,12 @@
     <div id="app">
         <header >
             <a href="#home" @click="page = 'home'" class="container-logo">
-                <img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo">
+                <img src="./imgs/logo-entre-nosotros.png" alt="Entre-Nosotros logo">
             </a>
             <nav class="container-menu">
                 <a href="#home" class="bg-transparent" @click="page = 'interview'">Entrevistas</a>
+                <a href="#home" class="bg-transparent" @click="page = 'tips'">Tips entrevistas</a>
                 <a href="#home" class="bg-transparent" @click="page = 'mentoring'">Mentorías</a>
-                <a href="#home" class="bg-transparent" @click="page = 'tips'">Tips entrevista</a>
                 <a href="#home" class="bg-transparent" @click="page = 'about'">Nosotros</a>
             </nav>
 
@@ -243,7 +244,7 @@
             <template v-if="page == 'interview'">
                 <h1 class="animate__animated animate__fadeInDown">Entrevistas</h1>
 
-                <p class="interview-description">¿Te gustaría participar por una entrevista con algún profesional de
+                <p class="interview-description" id="interview-description-int"> ¿Te gustaría participar por una entrevista con algún profesional de
                     Recursos Humanos del área de tecnología?</p>
                 <p class="interview-description">
                     Simularán una entrevista real. Se te harán algunas de las preguntas más frecuentes en una entrevista
@@ -286,10 +287,7 @@
                 <section class="section-video">
                     <h3 class="draw">Seguinos en nuestro canal de YouTube para ver todas las entrevistas <a href="#"><i
                                 class="fa-brands fa-youtube "></i></a></h3>
-                    <iframe width="700" height="400" src="https://www.youtube.com/embed/U1MDmstbnTg"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                                <iframe width="700" height="400" src="https://www.youtube.com/embed/Hadb54MCjXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </section>
 
                 <h2 class="h2-interviewer">Conocé al entrevistador de esta semana</h2>
@@ -321,7 +319,7 @@
 
             <!-- MENTORING -->
             <template v-if="page == 'mentoring'">
-                <h1>Mentorias</h1>
+                <h1>Mentorías</h1>
                 <p class="interview-description fs-3">
                     Te invitamos a contartar con nuestros mentores voluntarios, ellos son profesionales y referentes
                     capacitados en los múltiples y diversos temas que engloba el universo de las tecnologías de la
@@ -331,25 +329,25 @@
                 <!-- CARDS steps to follow -->
                 <section>
                     <div class="interview-cards pb-3">
-                        <article class="interview-card">
+                        <article class="interview-card animate__animated animate__fadeInLeftBig">
                             <p class="interview-card_title"><span class="interview-card_number">1</span>
                                 Inicia sesión</p>
-                            <p class="interview-card_text">Para solicitar una mentoría debes iniciar sesión, puedes
-                                hacerlo desde el menu de navegación</p>
+                            <p class="interview-card_text">Para poder solicitar una mentoría es necesario iniciar sesión, podés
+                                hacerlo desde el menú de navegación.</p>
                         </article>
 
-                        <article class="interview-card">
+                        <article class="interview-card animate__animated animate__fadeInUp">
                             <p class="interview-card_title"><span class="interview-card_number">2</span>Agendá una
                                 mentoría</p>
-                            <p class="interview-card_text">Encuentra a un profesional que se ajuste a tus intereses y
-                                solicita una sesión a través de su agenda virtual</p>
+                            <p class="interview-card_text">Encontrá a un profesional que se ajuste a tus intereses y
+                                solicitá una sesión a través de su agenda virtual.</p>
                         </article>
 
-                        <article class="interview-card">
+                        <article class="interview-card animate__animated animate__fadeInRightBig">
                             <p class="interview-card_title"><span class="interview-card_number">3</span>Asiste al
                                 encuentro</p>
-                            <p class="interview-card_text">Nuestras mentorías son gratuitas, así que solo debes acceder
-                                a la reunión el día pautado, recuerda ser puntual</p>
+                            <p class="interview-card_text">Nuestras mentorías son gratuitas, así que solo debés acceder
+                                a la reunión el día pautado, recordá ser puntual.</p>
                         </article>
                     </div>
 
@@ -398,7 +396,7 @@
 
                             </div>
 
-                            <div class="fs-4 mt-2">
+                            <div class="fs-4 mt-2 div-mentor-description">
                                 <p>{{mentor.description}}</p>
                             </div>
 
@@ -455,10 +453,106 @@
 
                 <h2 class="h2-faq">Cómo responder posibles preguntas de entrevista</h2>
 
-                <section class="section-faq">
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- accordion -->
+                <div class="accordion section-faq" id="accordionExample">
+                    <div class="accordion-item section-faq_item" id="accordion1">
+                      <h2 class="accordion-header" id="headingOne">Contame acerce de vos
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        </button>
+                        
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" id="accordion-body">
+                            A primera vista, parece una frase inocente para romper el hielo, pero tiene un objetivo bien claro: conocer qué tenés para ofrecerle a la empresa. El interés no está en tu vida personal, sino en tu vida laboral. Cómo trabajás, tus áreas de experiencia, qué aportes tenés para la empresa, etc. Demostrá tu valía y planteá tus puntos fuertes.
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item section-faq_item" id="accordion2">
+                        <h2 class="accordion-header" id="headingTwo">¿Cuál creés que es tu mayor defecto?
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          </button>
+                          
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body" id="accordion-body">
+                            Con esta pregunta, el entrevistador intenta averiguar dos aspectos clave sobre vos: tu capacidad para asumir tus errores y tu habilidad para corregirlos.
+                            Quiere saber si tenés buena recepción a la crítica y te esforzás por mejorar, o si sos de los que niegan los errores y se resisten a cambiar de hábitos.
+                            No digas frases como: "soy muy perfeccionista", "soy demasiado responsable", "me estreso si algo sale mal". Un consejo es mencionar alguna habilidad importante pero no determinante.
+                            Por ejemplo, si te desempeñás en área de la informática, podés decir que tu debilidad es la comunicación con el cliente. Como programador, desarrollador o diseñador eres excelente, pero no sabés vender tus productos. Ahora bien, ese no es tu trabajo. De esta forma, podés ser honesto, pero sin poner en riesgo el puesto al que estás aspirando.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item section-faq_item" id="accordion3">
+                        <h2 class="accordion-header" id="headingThree">¿Por qué querés trabajar con nosotros?
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                          </button>
+                          
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body" id="accordion-body">
+                            Cuando te estés preparando para la entrevista de trabajo, asegúrate de tener un buen conocimiento de los productos y servicios de la empresa, su cultura corporativa y los planes futuros que te imaginas junto a ella. Utiliza esta información para describir de qué manera tus metas y ambiciones se alinean con estas motivaciones. Asegúrate de estar familiarizad@ con las últimas noticias relacionadas con la organización. Piensa en cómo tus objetivos y aspiraciones profesionales se alinean con su cultura corporativa, y utiliza esta información para formular una respuesta a esta misma pregunta: ¿qué proyectos me puede ofrecer la empresa que vayan en línea con mis ganas de aportar al desarrollo y crecimiento de la misma?.
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="accordion-item section-faq_item" id="accordion4">
+                        <h2 class="accordion-header" id="headingTwo">¿Cuál creés que es tu mayor defecto?
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          </button>
+                          
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body" id="accordion-body">
+                            Con esta pregunta, el entrevistador intenta averiguar dos aspectos clave sobre vos: tu capacidad para asumir tus errores y tu habilidad para corregirlos.
+                            Quiere saber si tenés buena recepción a la crítica y te esforzás por mejorar, o si sos de los que niegan los errores y se resisten a cambiar de hábitos.
+                            No digas frases como: "soy muy perfeccionista", "soy demasiado responsable", "me estreso si algo sale mal". Un consejo es mencionar alguna habilidad importante pero no determinante.
+                            Por ejemplo, si te desempeñás en área de la informática, podés decir que tu debilidad es la comunicación con el cliente. Como programador, desarrollador o diseñador eres excelente, pero no sabés vender tus productos. Ahora bien, ese no es tu trabajo. De esta forma, podés ser honesto, pero sin poner en riesgo el puesto al que estás aspirando.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item section-faq_item" id="accordion5">
+                        <h2 class="accordion-header" id="headingFive">Contame de algún conflicto que hayas atravesado y cómo lo solucionaste
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                          </button>
+                          
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div class="accordion-body" id="accordion-body">
+                            Preguntas como ésta son clásicas en una entrevista de trabajo. Pretenden ir más allá de las respuestas formuladas y cuestionar al candidato sobre su manera individual de reaccionar ante diferentes situaciones.  Pueden preguntarte ejemplos sobre resolución de conflictos, estrés, ansiedad, dificultades, integridad, etc. El objetivo es que demuestres con ejemplos qué clase de empleado sos. Preparate de antemano para dar ejemplos concretos y resolutivos de tu vida profesional.
+                          </div>
+                        </div>
+                      </div> 
+
+                </div>
+
+
+
+
+
+
+
+                <!-- *************************************************************** -->
+
+                <!-- <section class="section-faq">
                     <article class="section-faq_item">
                         <div class="question">
-                            <h3>Contame sobre vos</h3>
+                            <h3>Contame acerce de vos</h3>
                             <i class="fa-solid fa-chevron-down fa-2x arrow-down"></i>
                         </div>
                         <div class="answer">
@@ -560,8 +654,20 @@
                             </p>
                         </div>
                     </article>
-                </section>
+                </section> -->
             </template>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- *************************************************************** -->
 
             <!-- ABOUT US -->
             <template v-if="page == 'about'">
@@ -631,9 +737,9 @@
         <footer>
             <section class="footer-first-section">
                 <div class="container-logo">
-                    <a href="#"><img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo"></a>
+                    <a href="#init" @click="page = 'home'"><img src="./imgs/logo-entre-nosotros.png" alt="Entre-Nosotros logo"></a>
                 </div>
-                <p>Somos una comunidad llena de voluntarios con ganas de ayudarte a cumplir tus metas y conseguir ese
+                <p>Somos una comunidad repleta de voluntarios con ganas de ayudarte a cumplir tus metas y conseguir ese
                     trabajo que tanto anhelas.</p>
                 <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
             </section>
@@ -642,8 +748,8 @@
                 <h4>SECCIONES</h4>
                 <ul>
                     <li><a href="#init"  @click="page = 'interview'">ENTREVISTAS</a></li>
-                    <li><a href="#init" @click="page = 'mentoring'">MENTORÍAS</a></li>
                     <li><a href="#init" @click="page = 'tips'">TIPS ENTREVISTAS</a></li>
+                    <li><a href="#init" @click="page = 'mentoring'">MENTORÍAS</a></li>
                     <li><a href="#about" @click="page = 'about'">NOSOTROS</a></li>
                 </ul>
             </section>
