@@ -1,0 +1,68 @@
+[
+    {
+        "id": 0,
+        "photo": "https://img.freepik.com/foto-gratis/primer-plano-joven-exitoso-sonriendo-camara-pie-traje-casual-contra-fondo-azul_1258-66609.jpg?w=2000",
+        "first_name": "Carlos",
+        "last_name": "Herrera",
+        "description": "Hola! Soy Desarrollador Frontend con React, puedo resolver consultas relacionadas a React, Typescript, Vanilla JS, HTML o CSS. Además puedo ayudarte con la elección de tu camino o tus inicios en el mundo de la programación.",
+        "specialty": "Frontend",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/carlosherrerav/entre-nosotros-mentorship?month=2023-01"
+    },
+    {
+        "id": 1,
+        "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "first_name": "Marisa",
+        "last_name": "Cruz",
+        "description": "¡Hola! Soy Marisa y actualmente trabajo como QA Analyst. Te puedo ayudar a introducirte en el mundo IT, QA manual, ayudarte a pulir tu CV o a saber lo necesario para poder conseguir trabajo remoto.",
+        "specialty": "QA",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/marisa-cruz/mentoria-entre-nosotros?month=2023-01"
+    },
+    {
+        "id": 2,
+        "photo": "https://img.freepik.com/foto-gratis/retrato-joven-feliz-sonriendo-contra-espacio-blanco_58466-12722.jpg?w=740&t=st=1673626556~exp=1673627156~hmac=975851bce74f365b2663d31d6c9e140092cf71f36828c826759a12d2b11da175",
+        "first_name": "Lucas",
+        "last_name": "Perez",
+        "description": "Hola soy Lucas, soy un programador autodidacta especializado en el backend con lenguajes como C# y TypeScript con alrededor de 8 años de experiencia profesional. Siempre estoy dispuesto a ayudarte con un problema.",
+        "specialty": "Backend",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/carlosherrerav/entre-nosotros-mentorship?month=2023-01"
+    },
+    {
+        "id": 3,
+        "photo": "https://img.freepik.com/foto-gratis/retrato-mujer-joven-camisa_23-2148163295.jpg?w=740&t=st=1673626483~exp=1673627083~hmac=c056fa4671218d164bd4366169fdeb5dce5d5c221c3b07bb384303d7cbb87883",
+        "first_name": "Lilian",
+        "last_name": "Benitez",
+        "description": " Typescript, Vanilla JS, HTML o CSS. Te guio en tu camino hacia frontend developer, con práctica y ejemplos claros, me dedico profesionalmente como desarrolladora hasta más de 4 años",
+        "specialty": "Frontend",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/marisa-cruz/mentoria-entre-nosotros?month=2023-01"
+    },
+    {
+        "id": 4,
+        "photo": "https://img.freepik.com/foto-gratis/joven-barbudo-camisa-rayas_273609-5677.jpg?w=740&t=st=1673626657~exp=1673627257~hmac=457cb05437b7f824519897a02d1b3df606b91e425b0ce137c13768ef47f7343e",
+        "first_name": "Roberto",
+        "last_name": "Nuñez",
+        "description": "Hola! soy Roberto, actualmente me desempeño como analista funcional y QA manual en CIDS, y gracias a este conocimiento que adquirí me encantaría poder ayudarte, no dudes en escribirme para resolver alguna duda juntos.",
+        "specialty": "QA",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/carlosherrerav/entre-nosotros-mentorship?month=2023-01"
+    },
+    {
+        "id": 5,
+        "photo": "https://img.freepik.com/foto-gratis/sonriente-mujer-bonita-morena-mira-al-frente-aislado-pared-naranja_141793-65910.jpg?w=740&t=st=1673626626~exp=1673627226~hmac=8c027c1d057532e3c3cfd63971d08767f8a883413fc0a5d649887125dfe2959c",
+        "first_name": "Lorena",
+        "last_name": "Marquéz",
+        "description": "Hola! Soy Lorena, puedo resolver consultas relacionadas en Data Science ya que cuento con más 5 años de experiencia profesional. Además puedo ayudarte informandote de capacitaciones gratutitas y darte prácticas para que mejores cada día más",
+        "specialty": "Data science/ Data Engineer",
+        "linkedin": "https://www.linkedin.com/feed/",
+        "github": "https://github.com/",
+        "calendly": "https://calendly.com/marisa-cruz/mentoria-entre-nosotros?month=2023-01"
+    }
+]
