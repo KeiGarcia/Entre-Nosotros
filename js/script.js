@@ -278,7 +278,7 @@ const app = Vue.createApp({
         /* INTERVIEWS */
         eventInscribe(){
             Swal.fire({
-                html: '<h3 class="modal-title">¿Querés ser entrevistador?</h3><h4 class="modal-p">Completa el siguiente formulario y te contactaremos lo más pronto posible para comentarte más sobre la iniciativa y cómo seguimos.</h4><form class="modal-form"><input type="text" placeholder="Nombre *"><input type="text" placeholder="Apellido *"><input type="text" placeholder="Edad *"><input type="email" placeholder="Correo electrónico *"><input type="text" placeholder="Linkedin *"><textarea name="comment-why" placeholder="Contanos brevemente sobre vos y por qué te gustaría ser entrevistado"></textarea></form>',
+                html: '<h3 class="modal-title">¿Querés ser entrevistado?</h3><h4 class="modal-p">Completa el siguiente formulario y te contactaremos lo más pronto posible para comentarte más sobre la iniciativa y cómo seguimos.</h4><form class="modal-form"><input type="text" placeholder="Nombre *"><input type="text" placeholder="Apellido *"><input type="text" placeholder="Edad *"><input type="email" placeholder="Correo electrónico *"><input type="text" placeholder="Linkedin *"><textarea name="comment-why" placeholder="Contanos brevemente sobre vos y por qué te gustaría ser entrevistado"></textarea></form>',
           
                 width: '50%',
                 confirmButtonText: 'Enviar',
