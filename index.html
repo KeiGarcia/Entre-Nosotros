@@ -15,24 +15,25 @@
     <link rel="stylesheet" href="./css/interviews.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/mentoring.css">
+    <link rel="stylesheet" href="./css/aboutUs.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Entre-Nosotros</title>
 </head>
 
-<body>
+<body id="home">
     <!-- particles js -->
     <div v-if="page === 'home'" id="particles-js"></div>
 
     <div id="app">
-        <header>
-            <button @click="page = 'home'" class="container-logo">
+        <header >
+            <a href="#home" @click="page = 'home'" class="container-logo">
                 <img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo">
-            </button>
+            </a>
             <nav class="container-menu">
-                <button class="bg-transparent" @click="page = 'interview'">Entrevistas</button>
-                <button class="bg-transparent" @click="page = 'mentoring'">Mentorías</button>
-                <button class="bg-transparent" @click="page = 'tips'">Tips entrevista</button>
-                <button class="bg-transparent" @click="page = 'contact'">Contacto</button>
+                <a href="#home" class="bg-transparent" @click="page = 'interview'">Entrevistas</a>
+                <a href="#home" class="bg-transparent" @click="page = 'mentoring'">Mentorías</a>
+                <a href="#home" class="bg-transparent" @click="page = 'tips'">Tips entrevista</a>
+                <a href="#home" class="bg-transparent" @click="page = 'about'">Nosotros</a>
             </nav>
 
             <!-- BUTTONS SIGN IN -->
@@ -166,7 +167,7 @@
                 </div>
             </div>
         </header>
-        <main>
+        <main id="init">
             <!-- INDEX -->
             <template v-if="page == 'home'">
 
@@ -252,64 +253,64 @@
                     <!-- Todos los domingos realizamos un Vivo por nuestro canal de Youtube <span>@entre-nosotros</span> donde  -->
                 </p>
 
-                <section class="">
+                <section>
                     <div class="interview-cards">
-                        <article class="interview-card">
-                            <p class="interview-card_title"><span class="interview-card_number">1</span>Título de
-                                ejemplo</p>
-                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
-                            </p>
+                        <article class="interview-card animate__animated animate__fadeInLeftBig">
+                            <p class="interview-card_title"><span class="interview-card_number">1</span>Inscribite</p>
+                            <p class="interview-card_text">Para ser uno de los posibles candidatos entrevistados deberás
+                                completar un breve formulario ya que no podrá haber participantes anónimos.</p>
                         </article>
 
-                        <article class="interview-card">
-                            <p class="interview-card_title"><span class="interview-card_number">2</span>Título de
-                                ejemplo</p>
-                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
-                            </p>
+                        <article class="interview-card animate__animated animate__fadeInUp">
+                            <p class="interview-card_title"><span class="interview-card_number">2</span>Esperá nuestro
+                                mail</p>
+                            <p class="interview-card_text">Los días jueves realizamos un sorteo entre los inscriptos
+                                para seleccionar a 3 candidatos y te enviaremos un e-mail tanto si fuiste elegido como
+                                si no.</p>
                         </article>
 
-                        <article class="interview-card">
-                            <p class="interview-card_title"><span class="interview-card_number">3</span>Título de
-                                ejemplo</p>
-                            <p class="interview-card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Obcaecati voluptatem autem dolor eius expedita at, aliquam adipisci vel. Reiciendis, at.
+                        <article class="interview-card animate__animated animate__fadeInRightBig">
+                            <p class="interview-card_title"><span class="interview-card_number">3</span>Preparate</p>
+                            <p class="interview-card_text">Si fuiste seleccionado para la entrevista del siguiente
+                                domingo, preparate bien con nuestros tips para aprovechar esta oportunidad al máximo.
                             </p>
                         </article>
                     </div>
 
                     <div class="container-btn-formInterview">
-                        <a href="#" class="btn-formInterview">Quiero una entrevista</a>
+                        <a href="#" @click="eventInscribe()" class="btn-formInterview btn-inscribe">Quiero participar</a>
+                        <a href="#home" @click="page = 'tips'" class="btn-formInterview">Ver tips de entrevista</a>
                     </div>
                 </section>
 
-                <section class="container-followUs"></section>
-
                 <section class="section-video">
-                    <div class="video"></div>
+                    <h3 class="draw">Seguinos en nuestro canal de YouTube para ver todas las entrevistas <a href="#"><i
+                                class="fa-brands fa-youtube "></i></a></h3>
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/U1MDmstbnTg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </section>
 
-                <!-- <a class="yt-icon" href="#"><i class="fa-brands fa-youtube fa-2x"></i></a> -->
-                <h2>Conocé al entrevistador de esta semana</h2>
+                <h2 class="h2-interviewer">Conocé al entrevistador de esta semana</h2>
                 <section class="section-interviewer">
                     <article class="card-interviewer-left">
                         <div class="card front">
                         </div>
 
                         <div class="card back">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur fugit tempora
-                                temporibus quia deserunt quae dolores earum, asperiores sapiente exercitationem. Lorem,
-                                ipsum dolor sit amet consectetur adipisicing elit. Odit quas dolores, et quo omnis
-                                minus? Non nostrum nemo aut quibusdam?</p>
+                            <p>Julieta trabaja en la industria desde 2015 y lo ha estado haciendo principalmente desde
+                                Buenos Aires. A principios de 2021 comencé a trabajar mientras viajaba, viví en Berlín,
+                                visité diferentes partes de Europa, América Latina, África y Estados Unidos, ya que
+                                disfruto mucho trabajar en entornos multiculturales y tener la oportunidad de conocer
+                                diferentes culturas y mercados. ¡Nos vemos!</p>
                         </div>
                     </article>
 
                     <article class="card-interviewer-right">
-                        <h3>María Alejandra Figga<span>ressi</span></h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad voluptate fugiat molestiae
-                            pariatur possimus, at illum qui odit praesentium quo ab velit similique beatae esse rerum
-                            quasi tempora, quod hic.</p>
+                        <h3>Julieta Figa<span>ressi</span></h3>
+                        <p>Lead Tech Recruiter | Consejera de carrera | Creadora de contenido y estrategias de
+                            reclutamiento de tecnología disruptiva.</p>
                         <div>
                             <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
@@ -418,7 +419,7 @@
                 <h2 class="animate__animated animate__fadeInDown">Preparate con nosotros para tu próxima entrevista</h2>
 
                 <section class="tips-cards">
-                    <article class="tips_card">
+                    <article class="tips_card animate__animated animate__fadeInLeftBig">
                         <div class="tips-container-img">
                             <img src="../imgs/taking-notes.webp" alt="Imagen de una persona pensando">
                         </div>
@@ -429,23 +430,25 @@
                         </div>
                     </article>
 
-                    <article class="tips_card">
+                    <article class="tips_card animate__animated animate__fadeInUp">
                         <div class="tips-container-img">
                             <img src="../imgs/inInterview.jpg" alt="Imagen de una persona en una entrevista">
                         </div>
                         <div class="tips-container-info">
                             <h3>¿Qué hacer <span>durante</span> una entrevista?</h3>
-                            <a @click="eventIn()" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                            <a @click="eventIn()" class="btn-toModal" href="#"><i
+                                    class="fa-brands fa-readme fa-2x"></i></a>
                         </div>
                     </article>
 
-                    <article class="tips_card">
+                    <article class="tips_card animate__animated animate__fadeInRightBig">
                         <div class="tips-container-img">
                             <img src="../imgs/sending-email.webp" alt="Imagen de una persona con una computadora">
                         </div>
                         <div class="tips-container-info">
                             <h3>¿Qué hacer <span>después</span> de una entrevista?</h3>
-                            <a @click="eventAfter()" class="btn-toModal" href="#"><i class="fa-brands fa-readme fa-2x"></i></a>
+                            <a @click="eventAfter()" class="btn-toModal" href="#"><i
+                                    class="fa-brands fa-readme fa-2x"></i></a>
                         </div>
                     </article>
                 </section>
@@ -455,7 +458,7 @@
                 <section class="section-faq">
                     <article class="section-faq_item">
                         <div class="question">
-                            <h3>Contame algo sobre vos</h3>
+                            <h3>Contame sobre vos</h3>
                             <i class="fa-solid fa-chevron-down fa-2x arrow-down"></i>
                         </div>
                         <div class="answer">
@@ -560,13 +563,13 @@
                 </section>
             </template>
 
-            <!-- CONTACT -->
-            <template v-if="page == 'contact'">
-                <h1 class="animate__animated animate__fadeInDown">Sobre nosotros</h1>
+            <!-- ABOUT US -->
+            <template v-if="page == 'about'">
+                <h1 id="about" class="animate__animated animate__fadeInDown">Sobre nosotros</h1>
 
                 <section class="section-team">
                     <h2>Nuestro equipo</h2>
-                    <article class="section-team_member">
+                    <article class="section-team_member animate__animated animate__fadeInLeft">
                         <div class="container-team-member-photo left">
                             <h3>KEILA TANIA GARCÍA</h3>
                         </div>
@@ -586,7 +589,8 @@
                         </div>
                     </article>
 
-                    <article class="section-team_member right-border">
+                    <article
+                        class="section-team_member right-border section-team_member animate__animated animate__fadeInRight">
                         <div class="container-team-member-info">
                             <p>Camila tiene 24 años y vive en la Ciudad de Buenos Aires. Estudió Medicina en la UBA
                                 hasta el 4° año de la carrera. Durante la pandemia comenzó a estudiar programación de
@@ -637,15 +641,15 @@
             <section class="footer-second-section">
                 <h4>SECCIONES</h4>
                 <ul>
-                    <li><a href="./html/interviews.html">ENTREVISTAS</a></li>
-                    <li><a href="#">MENTORIAS</a></li>
-                    <li><a href="./html/tips.html">TIPS ENTREVISTAS</a></li>
-                    <li><a href="./html/aboutUs.html">NOSOTROS</a></li>
+                    <li><a href="#init"  @click="page = 'interview'">ENTREVISTAS</a></li>
+                    <li><a href="#init" @click="page = 'mentoring'">MENTORÍAS</a></li>
+                    <li><a href="#init" @click="page = 'tips'">TIPS ENTREVISTAS</a></li>
+                    <li><a href="#about" @click="page = 'about'">NOSOTROS</a></li>
                 </ul>
             </section>
 
             <section class="footer-third-section">
-                <h4>NUESTOS DATOS</h4>
+                <h4>NUESTROS DATOS</h4>
                 <ul>
                     <li><i class="fa-solid fa-location-dot fa-2x"></i>Buenos Aires, Argentina</li>
                     <li><i class="fa-solid fa-envelope fa-2x"></i>info.entre-nosotros@gmail.com</li>
@@ -675,7 +679,6 @@
 
     <script src="./js/particles.js"></script>
     <script src="./js/faq.js"></script>
-    <script src="./js/moveCards.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
