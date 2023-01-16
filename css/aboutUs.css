@@ -1,5 +1,5 @@
 h1{
-    margin: 13rem auto 3rem;
+    margin: 6rem auto 3rem;
     font-size: 4rem;
     text-align: center;
     font-weight: bold;
@@ -8,7 +8,6 @@ h2{
     width: fit-content;
     color: violet;
     line-height: 1.5;
-    border-bottom: 0.1rem solid rgb(133, 15, 133);
     text-shadow: 0 0 5px violet;
     font-size: 3rem;
     margin: 0 auto 5rem;
