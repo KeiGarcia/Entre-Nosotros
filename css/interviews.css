@@ -13,7 +13,7 @@ h1{
 }
 .interview-description:last-of-type{
     width: 100%;
-    margin: 3rem 0 9rem;
+    margin: 3rem 0 7rem;
     font-size: 1.8rem;
     font-weight: normal;
     color: var(--white);
@@ -71,7 +71,8 @@ h1{
 .interview-card_text{
     font-size: 1.6rem;
     color: rgb(213, 213, 213);
-    text-align: center;
+    text-align: left;
+    padding: 0 0.4rem;
 }
 .container-btn-formInterview{
     width: fit-content;
@@ -80,21 +81,28 @@ h1{
 }
 .btn-formInterview{
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 1.4rem 2.8rem;
-    border-radius: 5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
     background-color: rgba(255, 255, 255, 0.21);
-    border: 0.1rem solid var(--white);
+    box-shadow: inset 0 0 3px var(--white), 0 0 3px var(--white);
     color: var(--white);
-    margin: 2rem auto 4rem;
+    margin: 0 rem;
 }
-.btn-formInterview:hover{
-    padding: 1.4rem 3.6rem;
+.btn-inscribe{
+    margin-right: 15rem;
     color: rgb(172, 16, 172);
     background-color: var(--white);
-    transition: 0.3s;
+}
+.btn-formInterview:hover,
+.btn-inscribe:hover{
+    padding: 0.8rem 4rem;
+    background-color: black;
+    border: 0.1rem solid violet;
+    color: violet;
+    transition: all 0.5s;
 }
 .fa-arrow-up-right-from-square{
     padding-left: 1rem;
@@ -108,24 +116,32 @@ h1{
 main > .section-youtube{
     padding: 0 0;
 }
-.container-followUs{
-    width: 100%;
-    height: 250px;
-    background-image: url(../imgs/followYt.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.video{
-    width: 80%;
-    height: 400px;
-    margin: 6rem auto;
-    border: 1px solid gray;
-}
-.container-youtube{
+.section-video{
     width: fit-content;
-    border-radius: 2rem;
-    background-color: red;
+    margin: 14rem auto;
+}
+.section-video h3{
+    margin-bottom: 8rem;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    color: violet;
+}
+.section-video .draw{
+    border-radius: 0.6rem;
+}
+.section-video h3 a{
+    color: violet;
+    text-decoration: none;
+}
+.section-video .fa-youtube{
+    margin-left: 1.5rem;
+}
+iframe{
+    box-shadow: inset 0 0 25px var(--white), 0 0 25px var(--white);
+    border-radius: 1rem;
 }
 .fa-youtube{
     padding: 1.5rem;
@@ -136,21 +152,29 @@ main > .section-youtube{
 h2{
     font-size: 4rem;
     text-align: center;
-    margin: 8rem auto 4rem;
+    margin: 8rem auto 6rem;
+}
+.h2-interviewer{
+    text-shadow: 0 0 3px var(--white);
+    color: var(--white);
 }
 .section-interviewer{
-    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
+    background-color: red;
+    background-color: violet;
+    border-radius: 5rem 1rem 5rem 1rem;
+    box-shadow: inset 0 0 20px violet, 0 0 20px violet;
+    margin: 0 18% 10rem;
+    padding: 2% 5%;
 }
 .card-interviewer-left{
-    width: 25%;
+    width: 50%;
     height: 30rem;
     position: relative;
     margin: 2rem 0 4rem;
-    border-radius: 50rem;
 }
 .card{
     position: absolute;
@@ -160,22 +184,24 @@ h2{
     transform-style: preserve-3d;
     transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     backface-visibility: hidden;
+    border-radius: 2rem;
 }
 .front{
     transform: rotateY(0deg);
-    box-shadow: inset 0 0 10px var(--white), 0 0 10px var(--white);
+    box-shadow: inset 0 0 8px var(--white), 0 0 8px var(--white);
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     background-image: url(../imgs/entrevistadora.webp);
     background-size: cover;
     background-position: center center;
+    border: none;
 }
 .front img{
     width: 100%;
     height: 100%;
 }
 .back{
-    padding: 2rem;
+    padding: 2rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +237,7 @@ h2{
     color: rgb(172, 16, 172);
 }
 .card-interviewer-right h3 span{
-    border-bottom: 0.3rem solid var(--grey-dark);
+    border-bottom: 0.3rem solid var(--violet-dark);
 }
 .card-interviewer-right p{
     margin-bottom: 4rem;
