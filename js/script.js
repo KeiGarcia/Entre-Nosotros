@@ -5,6 +5,8 @@ const app = Vue.createApp({
             mentors: [],
             mentorsFilter: [],
             specialty: ["Backend", "Data science/ Data Engineer", "Frontend", "QA", "All"],
+            selected: "true",
+
 
             select: [],
             page: "home",
@@ -98,6 +100,15 @@ const app = Vue.createApp({
 
         cerrarSesion(){
             this.inicioSesion = false
+
+            Swal.fire({
+                title: 'Has finalizado sesion, esperamos verte pronto! ',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                background: "#660866f3",
+                color: "#fff",
+                iconColor: "#ff00ff"
+              })
         },
 
         /* HOME */

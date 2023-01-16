@@ -42,8 +42,8 @@ header{
     padding: 1rem 13%;
     background-color: var(--black);
     border-bottom: 0.1rem solid rgb(162, 161, 161);
-    position: fixed;
-    top: 0;
+/*     position: sticky;
+    top: 0;  */
 }
 .container-logo{
     width: 10rem;
@@ -416,4 +416,15 @@ input[type="file"] {
 }
 #msg-emptyFields{
     opacity: 0;
+}
+
+.inputUser{
+    box-shadow: none !important;
+    border:none !important;
+}
+
+.aMentor{
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 2px;
 }

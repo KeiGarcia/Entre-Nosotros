@@ -25,7 +25,7 @@
     <div v-if="page === 'home'" id="particles-js"></div>
 
     <div id="app">
-        <header >
+        <header>
             <a href="#home" @click="page = 'home'" class="container-logo">
                 <img src="./imgs/barbie-logo.png" alt="Entre-Nosotros logo">
             </a>
@@ -52,16 +52,16 @@
                         <div class="modal-header d-flex justify-content-center">
                             <h1 class="modal-title fs-3 text-bg-dark m-0" id="exampleModalLabel">Inicio de Sesión</h1>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body ">
                             <article>
-                                <label class="p-2 text-light w-100 text-start">Email
+                                <label class="p-2 text-light w-100 text-start inputUser">Email
                                     <input type="email" class="border borderInput select text-center w-100"
                                         placeholder="Email" v-model="emailInicio">
                                 </label>
                             </article>
 
                             <article>
-                                <label class="p-2  text-light w-100 text-start">Contraseña
+                                <label class="p-2  text-light w-100 text-start inputUser">Contraseña
                                     <input type="password" class="border borderInput select text-center w-100"
                                         placeholder="Contraseña" v-model="passwordInicio">
                                 </label>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="modal-body">
                             <article>
-                                <label class="p-2 text-light w-100 text-start">Email
+                                <label class="p-2 text-light w-100 inputUser text-start">Email
                                     <input type="email" v-model="emailRegistro"
                                         class="border borderInput border-1 border-light select text-center w-100"
                                         placeholder="Email">
@@ -119,7 +119,7 @@
                             </article>
 
                             <article>
-                                <label class="p-2  text-light w-100 text-start">Contraseña
+                                <label class="p-2  text-light w-100 inputUser text-start">Contraseña
                                     <input type="password"
                                         class="border borderInput select border-1 border-light text-center w-100"
                                         placeholder="Contraseña" v-model="passwordRegistro">
@@ -278,7 +278,8 @@
                     </div>
 
                     <div class="container-btn-formInterview">
-                        <a href="#" @click="eventInscribe()" class="btn-formInterview btn-inscribe">Quiero participar</a>
+                        <a href="#" @click="eventInscribe()" class="btn-formInterview btn-inscribe">Quiero
+                            participar</a>
                         <a href="#home" @click="page = 'tips'" class="btn-formInterview">Ver tips de entrevista</a>
                     </div>
                 </section>
@@ -361,7 +362,7 @@
                     <h2 class="pt-5 mt-5 pb-4 text-light">Solicita una mentoría según especialidad</h2>
                     <div class="pb-5">
                         <select class="form-select backgroundDark text-light fs-4 p-2 select borderNeonViolet"
-                            v-model="specialty">
+                            v-model="specialty" aria-label="Default select example">
                             <option selected value="All">Todas las especialidades</option>
                             <option value="Backend">Backend</option>
                             <option value="Data science/ Data Engineer">Data science/ Data Engineer
@@ -382,7 +383,7 @@
                                 </div>
 
                                 <div class=" d-flex flex-column col-6 align-items-end">
-                                    <a class="btn-neon text-light aCalendly border border-1 border-light px-5 fs-4"
+                                    <a class="btn-neon text-light aCalendly border aMentor border-1 border-light px-5 fs-4"
                                         target="_blank" :href="mentor.calendly" v-if="inicioSesion === true">Solicitar
                                         mentoría</a>
                                     <button type="button" v-if="inicioSesion === false"
@@ -641,7 +642,7 @@
             <section class="footer-second-section">
                 <h4>SECCIONES</h4>
                 <ul>
-                    <li><a href="#init"  @click="page = 'interview'">ENTREVISTAS</a></li>
+                    <li><a href="#init" @click="page = 'interview'">ENTREVISTAS</a></li>
                     <li><a href="#init" @click="page = 'mentoring'">MENTORÍAS</a></li>
                     <li><a href="#init" @click="page = 'tips'">TIPS ENTREVISTAS</a></li>
                     <li><a href="#about" @click="page = 'about'">NOSOTROS</a></li>
