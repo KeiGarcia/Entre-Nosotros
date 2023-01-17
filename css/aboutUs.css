@@ -24,9 +24,9 @@ h2{
     box-shadow: inset 0 0 15px violet, 0 0 15px var(--white);
 }
 .container-team-member-photo{
-    width: 30%;
+    width: 25%;
     height: 40vh;
-    background-image: url(../imgs/entrevistadora.webp);
+    background-image: url(../imgs/KeilaGarciaEntreN.png);
     background-size: cover;
     background-position: center center;
     margin: 0 5rem;
@@ -34,6 +34,9 @@ h2{
     align-items: flex-end;
     border-radius: 2rem;
     box-shadow: inset 0 0 3px var(--white), 0 0 3px var(--white);
+}
+.container-team-member-photo2{
+    background-image: url(../imgs/inInterview.jpg);
 }
 .container-team-member-photo h3{
     width: 100%;
