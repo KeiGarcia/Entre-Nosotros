@@ -70,6 +70,14 @@ header button{
    
 }
 
+.hoverNav:hover{
+    color: violet;
+    text-shadow: rgb(255, 255, 255) 5px 0 10px;
+}
+.hoverNav:active{
+    color: violet;
+}
+
 .fa-user{
     padding-right: 1.6rem;
 }
@@ -429,4 +437,9 @@ input[type="file"] {
     text-decoration: none;
     border-radius: 3px;
     padding: 2px;
+}
+
+.userClose{
+    color: violet;
+    font-weight: bold;
 }

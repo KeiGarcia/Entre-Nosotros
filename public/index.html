@@ -31,10 +31,10 @@
                 <img src="./imgs/logo-entre-nosotros.png" alt="Entre-Nosotros logo">
             </a>
             <nav class="container-menu">
-                <a href="#home" class="bg-transparent" @click="page = 'interview'">Entrevistas</a>
-                <a href="#home" class="bg-transparent" @click="page = 'tips'">Tips entrevistas</a>
-                <a href="#home" class="bg-transparent" @click="page = 'mentoring'">Mentorías</a>
-                <a href="#home" class="bg-transparent" @click="page = 'about'">Nosotros</a>
+                <a href="#home" class="bg-transparent hoverNav" @click="page = 'interview'">Entrevistas</a>
+                <a href="#home" class="bg-transparent hoverNav" @click="page = 'tips'">Tips entrevistas</a>
+                <a href="#home" class="bg-transparent hoverNav" @click="page = 'mentoring'">Mentorías</a>
+                <a href="#home" class="bg-transparent hoverNav" @click="page = 'about'">Nosotros</a>
             </nav>
 
             <!-- BUTTONS SIGN IN -->
@@ -75,7 +75,8 @@
                                     Sesión</button>
 
                                 <button
-                                    class=" btn btn-neon mx-auto w-75 text-light mt-3 border border-1 border-light fs-5">
+                                    class=" btn btn-neon mx-auto w-75 text-light mt-3 border border-1 border-light fs-5" @click="iniciarSesionGoogle()" data-bs-dismiss="modal" aria-label="Close">
+                                    
                                     <img src="./imgs/google.png"
                                         style="height: 22px; width: 22px; vertical-align:middle;" alt="google"> Iniciar
                                     Sesión con
@@ -132,7 +133,7 @@
                                     @click="crearUsuario()" data-bs-dismiss="modal" aria-label="Close">Crear nueva
                                     cuenta</button>
 
-                                <button class=" btn btn-neon mx-auto w-75 text-light m-3 signUp-bgc fs-5">
+                                <button class=" btn btn-neon mx-auto w-75 text-light m-3 signUp-bgc fs-5" @click="crearUsuarioGoogle()" data-bs-dismiss="modal" aria-label="Close">
                                     <img src="./imgs/google.png"
                                         style="height: 22px; width: 22px; vertical-align:middle;" alt="google"> Crear
                                     nueva cuenta con
@@ -155,6 +156,7 @@
                         </div>
                         <div class="modal-body">
                             <article>
+                                <p class="text-center">Has iniciado sesión con: <span class="userClose">{{user}}</span> </p> <br>
                                 <p class="text-center">Esta seguro que desea cerrar sesión?</p>
                             </article>
 
@@ -641,8 +643,35 @@
     <!-- VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+
+    <!-- FIREBASE -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDc3s1UhfLP_vWs0Q2W7ZjNuGqKaoAQxps",
+          authDomain: "entre-nosotrospescar.firebaseapp.com",
+          databaseURL: "https://entre-nosotrospescar-default-rtdb.firebaseio.com",
+          projectId: "entre-nosotrospescar",
+          storageBucket: "entre-nosotrospescar.appspot.com",
+          messagingSenderId: "947965601350",
+          appId: "1:947965601350:web:45efdc71ef6c52b5e40c47"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+
+      <script src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
+      <script src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
+      <script src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
+      <script src="/__/firebase/init.js"></script>
+
     <script src="./js/particles.js"></script>
-    <script src="./js/faq.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
